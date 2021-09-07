@@ -1,0 +1,16 @@
+---
+title: "Duc Ngo"
+description: |
+  Here is Duc Ngo's website. I hope you like it!
+site: distill::distill_website
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+![](DucNgo.JPG){width="50%"}
+
+## About me:
+
+## Education:

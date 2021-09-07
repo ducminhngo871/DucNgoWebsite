@@ -1,0 +1,28 @@
+{
+  "articles": [
+    {
+      "path": "about.html",
+      "title": "About this site",
+      "description": "Some additional details about the website",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-09-07T10:34:50-05:00"
+    },
+    {
+      "path": "Blog.html",
+      "title": "Blog",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-09-07T10:34:51-05:00"
+    },
+    {
+      "path": "index.html",
+      "title": "Duc Ngo",
+      "description": "Here is Duc Ngo's website. I hope you like it!\n",
+      "author": [],
+      "contents": "\n\nAbout me:\nEducation:\n\n\n\n",
+      "last_modified": "2021-09-07T10:34:51-05:00"
+    }
+  ],
+  "collections": ["posts/posts.json"]
+}
