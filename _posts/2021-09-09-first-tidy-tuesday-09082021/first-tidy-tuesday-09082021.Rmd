@@ -1,0 +1,42 @@
+---
+title: "First Tidy Tuesday 09/08/2021"
+description: |
+  Here is my first tidy tuesday. It will improve over time!
+author:
+  - name: DucNgo
+    url: {}
+date: 09-09-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r}
+library(tidyverse)         # for graphing and data cleaning
+```
+
+
+```{r}
+# Get the Data
+constructors <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-07/constructors.csv')
+constructor_standings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-07/constructor_standings.csv')
+
+```
+
+```{r}
+constructor_standings %>%
+  group_by(constructorId) %>%
+  summarize(total_points = sum(points)) %>%
+  filter(constructorId < 50) %>%
+  ggplot(aes(x = constructorId, y = total_points)) + geom_col(fill = "blue") + 
+  labs(title = "The total number of points for the first 50 constructors")
+```
+
+For this week's data, I decide to look into the constructor ID and the total number of points for the first 50 constructors. We can see that constructor number 6 - ferrari has the highest points of them all. 
+
+Right now, the question I have is that when I try to filter the top constructor and I try to make a geom_col, the graph is not looking great. The reason for that is because we have a lot of constructors and when I filter it, the constructor is really far apart. So how can I do it? 
+
+Moreover, I would love to know the name of the constructors. Is there any way to combine constructor_standings with constructors? I have tried full join but it does not look great. 
+
+

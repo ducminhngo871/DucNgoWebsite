@@ -2,26 +2,32 @@
   "articles": [
     {
       "path": "about.html",
-      "title": "About this site",
-      "description": "Some additional details about the website",
+      "title": "About me",
       "author": [],
-      "contents": "\n\n\n\n",
-      "last_modified": "2021-09-07T10:34:50-05:00"
+      "contents": "\n\nAbout me:\nRight now, I am a senior majoring in Data Science and minoring in Computer Science at Macalester College. For the past year, I have been learning a lot about data while interning as a Quantitative Analyst at VietSeeds Education and Data Analyst at BENIT Vietnam. First and foremost, I have learned how to apply machine learning techniques such as Neural Network, XgBoost, Catboost into the field of finance and in the stock market. Additionally, I have learned the way to find key insights about the data using Python or R, create visualizations, build databases, and how to scrape data from various sites using BeautifulSoup, Selenium, or Google API. With these skills that I have learned, I hope that I can land a full-time data analyst job in the future.\nEducation:\nData Science Major, Computer Science Minor, 2018-2022\nMacalester College\nInternship experience:\nData Analyst Intern, March 2021- August 2021\nBENIT Vietnam\nQuantitative Analyst Intern, January 2021 – April 2021\nVietSeeds Foundation\nInvestment Banking Intern, November 2019 – January 2020\nMorgan Stanley\nBig Data Intern, May 2019– August 2019\nCMC Telecom\nOr if you are more interested, feel free to see my resume.\n\n\n\n",
+      "last_modified": "2021-09-09T00:39:21-05:00"
     },
     {
       "path": "Blog.html",
       "title": "Blog",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-09-07T10:34:51-05:00"
+      "last_modified": "2021-09-09T00:39:21-05:00"
     },
     {
       "path": "index.html",
       "title": "Duc Ngo",
       "description": "Here is Duc Ngo's website. I hope you like it!\n",
       "author": [],
-      "contents": "\n\nAbout me:\nEducation:\n\n\n\n",
-      "last_modified": "2021-09-07T10:34:51-05:00"
+      "contents": "\n\nAbout me:\nRight now, I am a senior majoring in Data Science and minoring in Computer Science at Macalester College. For the past year, I have been learning a lot about data while interning as a Quantitative Analyst at VietSeeds Education and Data Analyst at BENIT Vietnam. First and foremost, I have learned how to apply machine learning techniques such as Neural Network, XgBoost, Catboost into the field of finance and in the stock market. Additionally, I have learned the way to find key insights about the data using Python or R, create visualizations, build databases, and how to scrape data from various sites using BeautifulSoup, Selenium, or Google API. With these skills that I have learned, I hope that I can land a full-time data analyst job in the future.\nEducation:\nData Science Major, Computer Science Minor, 2018-2022\nMacalester College\nInternship experience:\nData Analyst Intern, March 2021- August 2021\nBENIT Vietnam\nQuantitative Analyst Intern, January 2021 – April 2021\nVietSeeds Foundation\nInvestment Banking Intern, November 2019 – January 2020\nMorgan Stanley\nBig Data Intern, May 2019– August 2019\nCMC Telecom\nOr if you are more interested, feel free to see my resume.\n\n\n\n",
+      "last_modified": "2021-09-09T00:39:22-05:00"
+    },
+    {
+      "path": "TidyTuesday.html",
+      "title": "Tidy Tuesday",
+      "author": [],
+      "contents": "\n\n\n\n",
+      "last_modified": "2021-09-09T00:39:22-05:00"
     }
   ],
   "collections": ["posts/posts.json"]

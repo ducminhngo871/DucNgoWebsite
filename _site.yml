@@ -5,10 +5,12 @@ description: |
 output_dir: "_site"
 navbar:
   logo: 
-    image: 2.png
+    image: ava_copy.png
   right:
     - text: "About"
       href: about.html
+    - text: "Tidy Tuesday"
+      href: TidyTuesday.html
     - text: "Blog"
       href: Blog.html
     - icon: fa fa-github
@@ -17,4 +19,7 @@ navbar:
       href: https://www.linkedin.com/in/duc-minh-ngo/
     - icon: fa fa-facebook
       href: https://www.facebook.com/goldenwarior1/
+    - icon: fa fa-medium
+      href: https://medium.com/@ducminhngo871
 output: distill::distill_article
+theme: "Duc_Ngo_theme.css"
