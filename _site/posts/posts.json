@@ -13,7 +13,7 @@
     "categories": [],
     "contents": "\n\n\nlibrary(tidyverse)         # for graphing and data cleaning\n\n\n\n\n\n# Get the Data\nconstructors <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-07/constructors.csv')\nconstructor_standings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-07/constructor_standings.csv')\n\n\n\n\n\nconstructor_standings %>%\n  group_by(constructorId) %>%\n  summarize(total_points = sum(points)) %>%\n  filter(constructorId < 50) %>%\n  ggplot(aes(x = constructorId, y = total_points)) + geom_col(fill = \"blue\") + \n  labs(title = \"The total number of points for the first 50 constructors\")\n\n\n\n\nFor this week’s data, I decide to look into the constructor ID and the total number of points for the first 50 constructors. We can see that constructor number 6 - ferrari has the highest points of them all.\nRight now, the question I have is that when I try to filter the top constructor and I try to make a geom_col, the graph is not looking great. The reason for that is because we have a lot of constructors and when I filter it, the constructor is really far apart. So how can I do it?\nMoreover, I would love to know the name of the constructors. Is there any way to combine constructor_standings with constructors? I have tried full join but it does not look great.\n\n\n\n",
     "preview": "posts/2021-09-09-first-tidy-tuesday-09082021/first-tidy-tuesday-09082021_files/figure-html5/unnamed-chunk-3-1.png",
-    "last_modified": "2021-09-09T00:17:36-05:00",
+    "last_modified": "2021-09-11T22:51:13-05:00",
     "input_file": {}
   },
   {
@@ -30,7 +30,7 @@
     "categories": [],
     "contents": "\nHere is where I will talk about the web.\n\n\n\n",
     "preview": "posts/2021-09-07-buildingdistill/ava_copy.png",
-    "last_modified": "2021-09-07T10:33:45-05:00",
+    "last_modified": "2021-09-11T22:51:13-05:00",
     "input_file": {}
   }
 ]
