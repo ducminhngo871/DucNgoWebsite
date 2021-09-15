@@ -1,0 +1,13 @@
+---
+title: "R Project"
+
+site: distill::distill_website
+---
+
+Here is some of my project using R. I would love to hear if you found them helpful. Or, if there’s a mistake you find or a suggestion you have, I’d love to hear about those, too.
+
+## Change in Stock market before and After the Pandemic
+
+This project focuses on finding  the differences between different companies within the top 3 of every sector in the S&P 500 to see which company thrives and which company falls after the pandemic. We track its market cap, volume, price per share to see the key differences between these 11 fields.
+
+Here is the link to the [website](https://data-science-final-project.netlify.app)
