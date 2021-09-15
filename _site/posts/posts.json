@@ -15,22 +15,5 @@
     "preview": "posts/2021-09-09-first-tidy-tuesday-09082021/first-tidy-tuesday-09082021_files/figure-html5/unnamed-chunk-3-1.png",
     "last_modified": "2021-09-11T22:51:13-05:00",
     "input_file": {}
-  },
-  {
-    "path": "posts/2021-09-07-buildingdistill/",
-    "title": "Building a {distill} website",
-    "description": "A short description of the post.",
-    "author": [
-      {
-        "name": "DucNgo",
-        "url": {}
-      }
-    ],
-    "date": "2021-09-07",
-    "categories": [],
-    "contents": "\nHere is where I will talk about the web.\n\n\n\n",
-    "preview": "posts/2021-09-07-buildingdistill/ava_copy.png",
-    "last_modified": "2021-09-11T22:51:13-05:00",
-    "input_file": {}
   }
 ]

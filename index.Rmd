@@ -9,7 +9,7 @@ site: distill::distill_website
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![](ava_copy.png)
+![](1.png)
 
 ## About me:
 
