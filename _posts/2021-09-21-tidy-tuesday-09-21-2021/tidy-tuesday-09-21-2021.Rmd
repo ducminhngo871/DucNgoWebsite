@@ -1,0 +1,67 @@
+---
+title: "Tidy Tuesday 09-21-2021"
+description: |
+  Here is my attempt for tidy tuesday 09-21-21. The dataset is about the Emmy Awards. 
+author:
+  - name: DucNgo
+    url: {}
+date: 09-21-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r}
+library(tidytuesdayR)
+library(tidyverse)         # for graphing and data cleaning
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+# Get the Data
+
+# Read in with tidytuesdayR package 
+# Install from CRAN via: install.packages("tidytuesdayR")
+# This loads the readme and all the datasets for the week of interest
+
+# Either ISO-8601 date or year/week works!
+
+tuesdata <- tidytuesdayR::tt_load('2021-09-21')
+tuesdata <- tidytuesdayR::tt_load(2021, week = 39)
+
+nominees <- tuesdata$nominees
+
+# Or read in the data manually
+
+nominees <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-21/nominees.csv')
+```
+
+
+```{r}
+### Create a graph based on every category
+nominees_types <- nominees %>%
+  filter(year > 2010) %>%
+  group_by(year, type) %>%
+  summarize(count=n()) 
+
+
+nominees_types %>%
+  ggplot(aes(x = as.factor(year), y = count, fill = type)) + geom_col(position = "dodge") + 
+  geom_text(aes(x = as.factor(year), y = count, label = count),
+            position = position_dodge(width = 0.8), 
+            vjust = -1, size = 2,
+            fontface="bold", 
+            family="Times") + 
+  labs(title = "Emmy Awards Nominee and Winner from 2011 to 2021") + 
+  theme_minimal() + 
+  theme(axis.title.x = element_blank(), 
+        axis.title.y = element_blank(),
+        plot.title = element_text(family = "Times"))
+```
+
+In here, we can clearly see that from 2011 to 2013, the number of nominee increased rapidly. However, the number of nominee in 2014 significantly dropped. 
+
+After a strange 2014, the number of nominee increased significantly every year from 1630 nominees in 2015 to 2152 nominees in 2019. Meanwhile, the number of winner remains relatively stable. 
