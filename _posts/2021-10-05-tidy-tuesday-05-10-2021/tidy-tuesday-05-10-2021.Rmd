@@ -1,0 +1,96 @@
+---
+title: "Tidy Tuesday 05-10-2021"
+description: |
+  During this week, I am trying to find information about nurses in the US: their salary, how many nurses are there for each state in 2020. 
+  
+author:
+  - name: DucNgo
+    url: {}
+date: 10-05-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
+```
+
+```{r}
+library(tidytuesdayR)
+library(tidyverse)         # for graphing and data cleaning
+library(ggthemes)
+library(ggplot2) # tidyverse data visualization package
+```
+
+```{r}
+library(ggmap)
+library(tmaptools)
+library(maps)
+library(plotly)
+library(scales)
+```
+
+
+
+```{r}
+library(readr)
+statePopulation <- read_delim("statePopulation.csv", 
+    delim = ";", escape_double = FALSE, trim_ws = TRUE)
+```
+
+
+```{r}
+nurses <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-05/nurses.csv')
+```
+
+```{r}
+nurses_join <- nurses %>% 
+  left_join(statePopulation, by = "State" )
+
+nurses_join
+```
+
+```{r}
+nurses_2020 <- nurses_join %>% 
+  filter(Year == 2020) %>% 
+  mutate(std_registered_per_1000 = `Total Employed RN` / Pop * 1000) %>% 
+  mutate(`Registered Nurses per 1000 people` = std_registered_per_1000) %>% 
+  mutate(state_lower = tolower(State)) 
+  
+nurses_2020
+```
+
+```{r}
+states_map <- map_data("state")
+```
+
+```{r}
+nurses_median_salary <- nurses %>% 
+  filter(Year == 2020) %>% 
+  mutate(state_lower = tolower(State)) %>% 
+  ggplot(aes(fill = `Annual Salary Median`)) + 
+  geom_map(aes(map_id = state_lower), color = "gray", size = 0.3, map = states_map) + 
+  expand_limits (x = states_map$long, y = states_map$lat) + 
+  theme_map() + 
+  scale_fill_gradient(low = "floralwhite", high = "firebrick4")
+
+ggplotly(nurses_median_salary)
+
+```
+
+The second map I am going to create will be how many registered nurses per 1000 people: 
+
+```{r}
+nurses_map <- nurses_2020 %>% 
+  ggplot(aes(fill = `Registered Nurses per 1000 people`, label = State)) + 
+  geom_map(aes(map_id = state_lower), color = "gray", size = 0.3, map = states_map) + 
+  expand_limits (x = states_map$long, y = states_map$lat) +
+  theme_map() + 
+  scale_fill_gradient(low = "white", high = "navy") + labs (fill = "Registered Nurses per 1000 people")
+
+ggplotly(nurses_map)
+```
+
+
+
