@@ -17,6 +17,23 @@
     "input_file": "tidy-tuesday-10-19-2021.knit.md"
   },
   {
+    "path": "posts/2021-10-19-a-really-cool-graph/",
+    "title": "A really cool graph",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "DucNgo",
+        "url": {}
+      }
+    ],
+    "date": "2021-10-19",
+    "categories": [],
+    "contents": "\n\n\n\n\n\n\n\n\n\n",
+    "preview": "posts/2021-10-19-a-really-cool-graph/a-really-cool-graph_files/figure-html5/unnamed-chunk-2-1.png",
+    "last_modified": "2021-10-19T10:13:56-05:00",
+    "input_file": "a-really-cool-graph.knit.md"
+  },
+  {
     "path": "posts/2021-10-05-tidy-tuesday-05-10-2021/",
     "title": "Tidy Tuesday 05-10-2021",
     "description": "During this week, I am trying to find information about nurses in the US: their salary, how many nurses are there for each state in 2020.",
