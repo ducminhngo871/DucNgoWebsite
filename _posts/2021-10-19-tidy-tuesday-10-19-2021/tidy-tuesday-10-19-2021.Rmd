@@ -1,0 +1,63 @@
+---
+title: "Tidy Tuesday 10-19-2021"
+description: |
+  A short description of the post.
+author:
+  - name: DucNgo
+    url: {}
+date: 10-19-2021
+output:
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+Here is the dataset: 
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(gghighlight)
+```
+
+```{r}
+library(googlesheets4)
+
+library(lubridate)
+
+gs4_deauth() #To not have to authorize each time you knit.
+
+harvest_2021 <- read_sheet("https://docs.google.com/spreadsheets/d/1DU6dpxrbPGW2oJHQ6TG_xibazoGhvmRcqk2iPGOaRUI/edit?usp=sharing") %>%
+mutate(date = ymd(date))
+```
+
+In here, I am trying to explore the min and the max date for the plot: 
+
+```{r}
+harvest_2021 %>% 
+  summarise(min(date), max(date))
+```
+```{r}
+harvest_2021 %>% 
+  mutate(wt_lbs = weight*0.00220462) %>% 
+  group_by(vegetable, date) %>%
+  summarize(daily_wt_lbs = sum(wt_lbs)) %>% 
+  mutate(cum_wt_lbs = cumsum(daily_wt_lbs)) %>% 
+  arrange(cum_wt_lbs) %>% 
+  ggplot(aes(x = date, y = cum_wt_lbs, color = vegetable)) +
+  geom_line() + 
+  gghighlight(max(cum_wt_lbs) > 90) + 
+  labs(title = "The vegatable's cumulative weight in pounds from May 2021 to October 2021",
+       y = "",
+       x = "") + 
+  theme_minimal() + 
+  theme(# remove the vertical grid lines
+        panel.grid.major.x = element_blank() ,
+        panel.grid.major.y = element_line( size=.05, color="black")) 
+```
+
+

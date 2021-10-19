@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-10-19-tidy-tuesday-10-19-2021/",
+    "title": "Tidy Tuesday 10-19-2021",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "DucNgo",
+        "url": {}
+      }
+    ],
+    "date": "2021-10-19",
+    "categories": [],
+    "contents": "\nHere is the dataset:\n\n\n\n\n\n\nIn here, I am trying to explore the min and the max date for the plot:\n\n# A tibble: 1 × 2\n  `min(date)` `max(date)`\n  <date>      <date>     \n1 2021-05-10  2021-10-17 \n\n\n\n\n\n\n\n",
+    "preview": "posts/2021-10-19-tidy-tuesday-10-19-2021/tidy-tuesday-10-19-2021_files/figure-html5/unnamed-chunk-4-1.png",
+    "last_modified": "2021-10-19T10:06:49-05:00",
+    "input_file": "tidy-tuesday-10-19-2021.knit.md"
+  },
+  {
     "path": "posts/2021-10-05-tidy-tuesday-05-10-2021/",
     "title": "Tidy Tuesday 05-10-2021",
     "description": "During this week, I am trying to find information about nurses in the US: their salary, how many nurses are there for each state in 2020.",
