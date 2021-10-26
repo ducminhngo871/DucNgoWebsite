@@ -1,5 +1,22 @@
 [
   {
+    "path": "posts/2021-10-26-10-26-2021-tidy-tuesday/",
+    "title": "10-26-2021 Tidy Tuesday",
+    "description": "A short description of the post.",
+    "author": [
+      {
+        "name": "DucNgo",
+        "url": {}
+      }
+    ],
+    "date": "2021-10-26",
+    "categories": [],
+    "contents": "\n\n\n# Or read in the data manually\n\nultra_rankings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/ultra_rankings.csv')\nrace <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/race.csv')\n\n\n\n\n\nlibrary(tidyverse)         # for reading in data, graphing, and cleaning\nlibrary(tidymodels)        # for modeling... tidily\nlibrary(usemodels)         # for suggesting step_XXX() functions\nlibrary(glmnet)            # for regularized regression, including LASSO\nlibrary(naniar)            # for examining missing values (NAs)\nlibrary(lubridate)         # for date manipulation\nlibrary(moderndive)        # for King County housing data\nlibrary(vip)               # for variable importance plots\nlibrary(rmarkdown)         # for paged tables\nlibrary(stacks)\nlibrary(doParallel)        # for parallel processing\ntheme_set(theme_minimal()) # my favorite ggplot2 theme :)\nlibrary(ggthemes)\nlibrary(hms)\n\n\n\n\n\nultra_rankings %>% \n  filter(age > 10, age < 100) %>%\n  select(rank, age, time_in_seconds, gender) %>% \n  drop_na() %>% \n  mutate(time_Hour = time_in_seconds / 3600) %>% \n  mutate(age_groups = cut(age, seq(10, 140, 10))) %>% \n  group_by(age_groups, gender) %>% \n  summarize(mean_time = mean(time_Hour)) %>% \n  ggplot(aes(x= age_groups, y = mean_time, fill = gender)) + \n  geom_col(position = \"dodge\") +\n  geom_text(aes(x = age_groups, y =mean_time, label = sprintf(\"%0.2f\", round(mean_time, digits = 2))),\n            position = position_dodge(width = 0.8), \n            vjust = -1, size = 2,\n            fontface=\"bold\", \n            family=\"Times\") +\n  labs(title = \"Average running time in Hour for each age group accross all countries\", \n       y= NULL, \n       x = NULL) + \n  theme(axis.title.x = element_blank(), \n        axis.title.y = element_blank(),\n        plot.title = element_text(family = \"Times\"), \n        axis.text = element_blank()) + \n  theme_minimal()\n\n\n\n\n\n\n\n",
+    "preview": "posts/2021-10-26-10-26-2021-tidy-tuesday/10-26-2021-tidy-tuesday_files/figure-html5/unnamed-chunk-2-1.png",
+    "last_modified": "2021-10-26T10:59:57-05:00",
+    "input_file": "10-26-2021-tidy-tuesday.knit.md"
+  },
+  {
     "path": "posts/2021-10-19-tidy-tuesday-10-19-2021/",
     "title": "Tidy Tuesday 10-19-2021",
     "description": "A short description of the post.",
