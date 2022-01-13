@@ -19,15 +19,15 @@
       "path": "RProject.html",
       "title": "R Project",
       "author": [],
-      "contents": "\nHere is some of my project using R. I would love to hear if you found them helpful. Or, if there’s a mistake you find or a suggestion you have, I’d love to hear about those, too.\nExploration of Rayshader\nThis project focuses on discovering rayshader features (the 3D Mapping technique in R).\nWhat is Rayshader? rayshader is an open source package for producing 2D and 3D data visualizations in R. rayshader uses elevation data in a base R matrix and a combination of raytracing, spherical texture mapping, overlays, and ambient occlusion to generate beautiful topographic 2D and 3D maps. In addition to maps, rayshader also allows the user to translate ggplot2 objects into beautiful 3D data visualizations.\nIn this project, we will see different feautures of rayshader, how to combine that with ggplot2 as well as a cool dataset for you to explore!\nHere is the link to the website\nChange in Stock market before and After the Pandemic\nThis project focuses on finding the differences between different companies within the top 3 of every sector in the S&P 500 to see which company thrives and which company falls after the pandemic. We track its market cap, volume, price per share to see the key differences between these 11 fields.\nHere is the link to the website\n\n\n\n",
-      "last_modified": "2021-10-05T10:56:10-05:00"
+      "contents": "\nHere is some of my project using R. I would love to hear if you found them helpful. Or, if there’s a mistake you find or a suggestion you have, I’d love to hear about those, too.\nS&P 500 Profit Prediction\nFor this project, we try to predict the profitability of the S&P500 Companies and pick the company with the highest chance to generate profit. So far, in 2021, our top 20 companies have the profitability of 47.25%, which is far higher than the normal S&P 500’s profit of 23.07%.\nYou can check it out here\nBayesian Finance\nFor this project, we try a different method: using Bayesian Technique to predict the earnings of S&P 500 Companies. How will the project turn out? You can check it out here\nExploration of Rayshader\nThis project focuses on discovering rayshader features (the 3D Mapping technique in R).\nWhat is Rayshader? rayshader is an open source package for producing 2D and 3D data visualizations in R. rayshader uses elevation data in a base R matrix and a combination of raytracing, spherical texture mapping, overlays, and ambient occlusion to generate beautiful topographic 2D and 3D maps. In addition to maps, rayshader also allows the user to translate ggplot2 objects into beautiful 3D data visualizations.\nIn this project, we will see different feautures of rayshader, how to combine that with ggplot2 as well as a cool dataset for you to explore!\nHere is the link to the website\nChange in Stock market before and After the Pandemic\nThis project focuses on finding the differences between different companies within the top 3 of every sector in the S&P 500 to see which company thrives and which company falls after the pandemic. We track its market cap, volume, price per share to see the key differences between these 11 fields.\nHere is the link to the website\n\n\n\n",
+      "last_modified": "2022-01-13T13:58:56-06:00"
     },
     {
       "path": "TidyTuesday.html",
       "title": "Tidy Tuesday and R Project",
       "author": [],
       "contents": "\n\n\n\n",
-      "last_modified": "2021-10-05T10:56:10-05:00"
+      "last_modified": "2021-10-26T10:59:57-05:00"
     }
   ],
   "collections": ["posts/posts.json"]
