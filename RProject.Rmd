@@ -12,6 +12,8 @@ For this project, we try to predict the profitability of the S&P500 Companies an
 
 You can check it out [here](https://sp500predictionprofit.netlify.app)
 
+Moreover, if you want to see the powerpoint presentation for the project, I also included it below [here](https://docs.google.com/presentation/d/1acwePWvIieVakPHu-R3zLfViFH8QpYD3/edit?usp=sharing&ouid=107416410399851833560&rtpof=true&sd=true)
+
 ## Bayesian Finance
 
 For this project, we try a different method: using Bayesian Technique to predict the earnings of S&P 500 Companies. How will the project turn out? You can check it out [here](https://nolan-meyer.github.io/bayesian-finance/) 
