@@ -1,42 +1,46 @@
 ---
-title: "Duc Ngo"
-description: |
-  Here is Duc Ngo's website. I hope you like it!
+title: "Daniel Ngo"
+image: "DucNgoPicture.jpg"
+links:
+  - label: '<i class="fab fa-linkedin"></i> LinkedIn'
+    url: 'https://www.linkedin.com/in/duc-minh-ngo/ target = "_blank"'
+    
+  - label: '<i class="fab fa-medium"></i> Medium'
+    url: 'https://medium.com/@ducminhngo871 target = "_blank" '
+    
+  - label: '<i class="fab fa-github"></i> GitHub'
+    url: 'https://github.com/ducminhngo871 target = "_blank" '
+    
+  - label: '<i class="fas fa-envelope"></i> Email'
+    url: 'mailto:ducminhngo871@gmail.com target = "_blank" '
+    
+output:
+  postcards::trestles
 site: distill::distill_website
 ---
+ 
+## About me
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
-```
+I am a data analyst for In4mation Insights, located in Needham, Massachusets. My main responsibilities involve developing and building purchase structure database to see customers' behavior in each state. Following that, I use my machine learning and analyzing skills to try seeing the differences and the importance of the customer of that state on each particular type of product types. 
 
-![](1.png)
+Moreover, I am also in charge of creating machine learning models to predict the price elasticity between each state to see the impact of price, number of stores or purchased units number for each cigarette pack. 
 
-## About me:
+Apart from my job, I also post my personal project as well as visualizations that I have been created in the Personal Project and Tidy Tuesday section. Check it out!
 
-Right now, I am a senior majoring in Data Science and minoring in Computer Science at Macalester College. For the past year, I have been learning a lot about data while interning as a Quantitative Analyst at VietSeeds Education and Data Analyst at BENIT Vietnam. First and foremost, I have learned how to apply machine learning techniques such as Neural Network, XgBoost, Catboost into the field of finance and in the stock market. Additionally, I have learned the way to find key insights about the data using Python or R, create visualizations, build databases, and how to scrape data from various sites using BeautifulSoup, Selenium, or Google API. With these skills that I have learned, I hope that I can land a full-time data analyst job in the future. 
+## Education
 
-## Education:
+**Macalester College** | Saint Paul, MN
 
-Data Science Major, Computer Science Minor, 2018-2022
+Data Science Major, Pure Mathematics, Computer Science Minor | September 2018 - May 2022
 
-Macalester College
+Magna Cum Laude | 3.89 / 4.00 GPA.  
 
-## Internship experience: 
+## Work Experience
 
-Data Analyst Intern, March 2021- August 2021
+**In4mation Insights** | Marketing Analyst | July 2022 - Present
 
-BENIT Vietnam
+**BENIT** | Data Analyst Intern | March 2021- August 2021
 
-Quantitative Analyst Intern, January 2021 – April 2021
+**VietSeeds Foundation** | Quantitative Analyst Intern| January 2021 – April 2021
 
-VietSeeds Foundation
 
-Investment Banking Intern, November 2019 – January 2020
-
-Morgan Stanley
-
-Big Data Intern, May 2019– August 2019
-
-CMC Telecom
-
-Or if you are more interested, feel free to see my [resume](https://drive.google.com/file/d/1pTQnWQa4eXH5HnlSdiNKvD_btjAGQNUi/view?usp=sharing).

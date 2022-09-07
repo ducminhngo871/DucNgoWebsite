@@ -1,14 +1,15 @@
 name: "website"
-title: "Duc Ngo"
+title: "Daniel Ngo"
 description: |
-  Here is Duc Ngo's website. I hope you like it!
+  Here is Daniel Ngo's Website. 
+  Here is the place where I share personal projects and ideas that I have learned throughout the year!
 output_dir: "_site"
 navbar:
   logo: 
     image: ava_copy.png
   right:
-    - text: "About"
-      href: about.html
+    - text: "Work Experience"
+      href: work.html
     - text: "Tidy Tuesday"
       href: TidyTuesday.html
     - text: "R Project"

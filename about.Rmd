@@ -1,39 +1,31 @@
 ---
-title: "About me"
+title: "Daniel Ngo"
+description: |
+  Here is Daniel Ngo's Website. Here is the place where I share personal projects and ideas that I have learned throughout the year!
+site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE)
 ```
 
-![](new_oreleans copy.png)
+![](DucNgoPicture.jpg)
 
 ## About me:
 
-Right now, I am a senior majoring in Data Science and minoring in Computer Science at Macalester College. For the past year, I have been learning a lot about data while interning as a Quantitative Analyst at VietSeeds Education and Data Analyst at BENIT Vietnam. First and foremost, I have learned how to apply machine learning techniques such as Neural Network, XgBoost, Catboost into the field of finance and in the stock market. Additionally, I have learned the way to find key insights about the data using Python or R, create visualizations, build databases, and how to scrape data from various sites using BeautifulSoup, Selenium, or Google API. With these skills that I have learned, I hope that I can land a full-time data analyst job in the future. 
+Right now, I am a data analyst for In4mation Insights, located in Needham, Massachusets. My main responsibilities involve developing and building purchase structure database to see customers' behavior in each state. Following that, I use my machine learning and analyzing skills to try seeing the differences and the importance of the customer of that state on each particular type of product types. 
+
+Moreover, I am also in charge of creating machine learning models to predict the price elasticity between each state to see the impact of price, number of stores or purchased units number for each cigarette pack. 
+
+Apart from my job, I also post my personal project as well as visualizations that I have been created in the Personal Project and Tidy Tuesday section. Check it out!
 
 ## Education:
 
-Data Science Major, Computer Science Minor, 2018-2022
+Magna Cum Laude - 3.89 / 4.00 GPA. 
+
+Data Science Major
+
+Pure Mathematics, Computer Science Minor, 2018-2022
 
 Macalester College
 
-## Internship experience: 
-
-Data Analyst Intern, March 2021- August 2021
-
-BENIT Vietnam
-
-Quantitative Analyst Intern, January 2021 – April 2021
-
-VietSeeds Foundation
-
-Investment Banking Intern, November 2019 – January 2020
-
-Morgan Stanley
-
-Big Data Intern, May 2019– August 2019
-
-CMC Telecom
-
-Or if you are more interested, feel free to see my [resume](https://drive.google.com/file/d/1pTQnWQa4eXH5HnlSdiNKvD_btjAGQNUi/view?usp=sharing).

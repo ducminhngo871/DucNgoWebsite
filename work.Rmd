@@ -1,0 +1,23 @@
+---
+title: "Work Experience"
+
+site: distill::distill_website
+---
+
+Below is the snapshot of my internship and work experience so far: 
+
+**In4mation Insights** | Marketing Analyst | July 2022 - Present
+
+**BENIT** | Data Analyst Intern | March 2021- August 2021
+
+**VietSeeds Foundation** | Quantitative Analyst Intern | January 2021 – April 2021
+
+**Morgan Stanley** | Investment Banking Intern | November 2019 – January 2020
+
+**CMC Telecom** | Big Data Intern | May 2018 – August 2018
+
+Additionally, during my four years at Macalester, I have achieved a few data science awards. I have been awarded First Prize - Best in Show and Best Insights during DataFest 2022. If you are interested, here is
+[ the link](https://www.macalester.edu/news/2022/04/trio-awarded-best-in-show-at-datafest/)
+to the article. I am also the #1 Public Leaderboard on Tabular Playground Series – May 2021. 
+
+For more detailed information, feel free to see my [ full resume](https://drive.google.com/file/d/1pTQnWQa4eXH5HnlSdiNKvD_btjAGQNUi/view?usp=sharing).
