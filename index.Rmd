@@ -5,9 +5,6 @@ links:
   - label: '<i class="fab fa-linkedin"></i> LinkedIn'
     url: 'https://www.linkedin.com/in/duc-minh-ngo/ target = "_blank"'
     
-  - label: '<i class="fab fa-medium"></i> Medium'
-    url: 'https://medium.com/@ducminhngo871 target = "_blank" '
-    
   - label: '<i class="fab fa-github"></i> GitHub'
     url: 'https://github.com/ducminhngo871 target = "_blank" '
     
