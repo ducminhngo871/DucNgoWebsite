@@ -1,0 +1,67 @@
+[
+  {
+    "path": "project/2022-09-07-explorationofrayshader/",
+    "title": "Rayshader Exploration",
+    "description": {},
+    "author": [
+      {
+        "name": "DucNgo",
+        "url": {}
+      }
+    ],
+    "date": "2022-09-07",
+    "categories": [],
+    "contents": "\nThis project focuses on discovering rayshader features (the 3D\nMapping technique in R).\nWhat is Rayshader? rayshader is an open source package for producing\n2D and 3D data visualizations in R. rayshader uses elevation data in a\nbase R matrix and a combination of raytracing, spherical texture\nmapping, overlays, and ambient occlusion to generate beautiful\ntopographic 2D and 3D maps. In addition to maps, rayshader also allows\nthe user to translate ggplot2 objects into beautiful 3D data\nvisualizations.\nIn this project, we will see different feautures of rayshader, how to\ncombine that with ggplot2 as well as a cool dataset for you to\nexplore!\nHere is the link to the website\n\n\n\n",
+    "preview": "project/2022-09-07-explorationofrayshader/rayshader_hawai.jpeg",
+    "last_modified": "2022-09-07T17:20:38-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "project/2022-09-07-soccer-spatial-analysis/",
+    "title": "Soccer Spatial Analysis",
+    "description": "Soccer analytics has been an area of interest for a long time, but without the technology to track where and when events are happening few breakthroughs have happened. In this project, we plan to shed some lights into soccer spatial analytics using our knowledge in Correlated Data.",
+    "author": [],
+    "date": "2022-09-07",
+    "categories": [],
+    "contents": "\nSoccer analytics has been an area of interest for a long time, but\nwithout the technology to track where and when events are happening few\nbreakthroughs have happened. It has been known that statistical analysis\nof professional soccer has been way behind that of the “Big 4” American\nsports (baseball, football, basketball, and soccer).\nFor our research, we plan to shed some lights into soccer spatial\nanalytics by answering the three key questions:\nHow are passes distributed differently based on factors\nwithin a soccer match?\nWhere on the field do teams find more success passing than\nother teams, specifically in the Premier League?\nHow is the Premier League different from other top 5 European\nleagues?\nIf you are interested in this project, check out our website\n\n\n\n",
+    "preview": "project/2022-09-07-soccer-spatial-analysis/soccerSpatial.png",
+    "last_modified": "2022-09-07T17:35:53-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "project/2022-09-07-usingbayesiantopredictcorporateearnings/",
+    "title": "Using Bayesian to predict corporate earnings",
+    "description": {},
+    "author": [],
+    "date": "2022-03-07",
+    "categories": [],
+    "contents": "\nFor this project, our main goal is to analyze and model this data to\nbetter improve projections for a company’s future earnings. We took a\nBayesian approach to tackle a situation: predicting the future earnings\nof S&P 500 companies, using previous earnings and sales. We explore\na few Bayesian hierarchical models, as well as a SARIMA model using the\nbayesforcast package to try and identify one that can provide insight\nand better predictions for future company’s earnings.\nHow will the project turn out? You can check it out here\n\n\n\n",
+    "preview": "project/2022-09-07-usingbayesiantopredictcorporateearnings/finance.jpeg",
+    "last_modified": "2022-09-07T17:33:58-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "project/2022-09-07-using-machine-learning-to-predict-sp500-profit/",
+    "title": "Using Machine Learning to Predict S&P500 Profit",
+    "description": "For this project, we try to predict the profitability of the S&P500 Companies by machine learning. Using our model, the top 20 companies have the profitability of 47.25%, which is far higher than the normal S&P 500's profit of 23.07%.",
+    "author": [],
+    "date": "2022-03-03",
+    "categories": [],
+    "contents": "\nThe financial market is a strange place that is very hard to navigate\naround. We have seen Warren Buffett, Ray Dalio, Charlie Munger - the\nvery very best who have had billions of dollars. Others, 95% of the\npopulation, lose the money instead.\nSo, how are the best of the best pick its stocks? It is from the\nfundamental, the technical side or the sentimental side? Within this\nproject, we hope to bring another perspective, using machine learning\nmodels to predict the profitability of the stock price.\nYou can check it out here\nMoreover, if you want to see the powerpoint presentation for the\nproject, I also included it below here\n\n\n\n",
+    "preview": "project/2022-09-07-using-machine-learning-to-predict-sp500-profit/machineLearning.jpeg",
+    "last_modified": "2022-09-07T17:55:27-05:00",
+    "input_file": {}
+  },
+  {
+    "path": "project/2022-09-07-stock-change-before-and-after-the-pandemic/",
+    "title": "Stock Change before and After the Pandemic",
+    "description": "This project focuses on finding  the differences between different companies within the top 3 of every sector in the S&P 500 to see which company thrives and which company falls after the pandemic. We track its market cap, volume, price per share to see the key differences between these 11 fields.",
+    "author": [],
+    "date": "2020-09-07",
+    "categories": [],
+    "contents": "\nCOVID-19 is a devastating pandemic. Firstly thought of as a common\nflu in Wuhan, China, the pandemic has spread around the world, with more\nthan 100 million cases and more than 2.5 million deaths. It has changed\nour perspective in multiple areas, however, in this blog post, we focus\nspecifically on its impact on companies and sectors in the US stock\nmarket. We will see what are the changes in stock price, in market\ncapitalization as well as how each sector has changed after the\npandemic.\nHere is the link to the project\n\n\n\n",
+    "preview": "project/2022-09-07-stock-change-before-and-after-the-pandemic/corona.jpeg",
+    "last_modified": "2022-09-07T17:49:23-05:00",
+    "input_file": {}
+  }
+]
