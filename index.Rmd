@@ -18,9 +18,7 @@ site: distill::distill_website
  
 ## About me
 
-I am a data analyst for In4mation Insights, located in Needham, Massachusets. My main responsibilities involve developing and building purchase structure database to see customers' behavior in each state. Following that, I use my machine learning and analyzing skills to try seeing the differences and the importance of the customer of that state on each particular type of product types. 
-
-Moreover, I am also in charge of creating machine learning models to predict the price elasticity between each state to see the impact of price, number of stores or purchased units number for each cigarette pack. 
+Young professional with corporate and start-up experience in data analytics and finance. I have a strong interest in Data Science, Finance Technology, and Applied Machine Learning & Deep Learning. I hope to start a career in data science, facing the challenges of constant innovation at the heart of technology and data-driven companies.
 
 Apart from my job, I also post my personal project as well as visualizations that I have been created in the Personal Project and Tidy Tuesday section. Check it out!
 
@@ -28,7 +26,7 @@ Apart from my job, I also post my personal project as well as visualizations tha
 
 **Macalester College** | Saint Paul, MN
 
-Data Science Major, Pure Mathematics, Computer Science Minor | September 2018 - May 2022
+Data Science Major, Computer Science Minor | September 2018 - May 2022
 
 Magna Cum Laude | 3.89 / 4.00 GPA.  
 

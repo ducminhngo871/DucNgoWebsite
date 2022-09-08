@@ -1,0 +1,21 @@
+---
+title: "Stock Change before and After the Pandemic"
+description: |
+  This project focuses on finding  the differences between different companies within the top 3 of every sector in the S&P 500 to see which company thrives and which company falls after the pandemic. We track its market cap, volume, price per share to see the key differences between these 11 fields.
+date: 09-07-2020
+output:
+  distill::distill_article:
+    self_contained: false
+preview: corona.jpeg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+COVID-19 is a devastating pandemic. Firstly thought of as a common flu in Wuhan, China, the pandemic has spread around the world, with more than 100 million cases and more than 2.5 million deaths. It has changed our perspective in multiple areas, however, in this blog post, we focus specifically on its impact on companies and sectors in the US stock market. We will see what are the changes in stock price, in market capitalization as well as how each sector has changed after the pandemic. 
+
+Here is the link to the [project](https://data-science-final-project.netlify.app)
+
+

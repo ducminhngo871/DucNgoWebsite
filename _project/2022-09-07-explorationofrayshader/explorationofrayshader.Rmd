@@ -1,0 +1,19 @@
+---
+title: "Rayshader Exploration"
+description: |
+  For this project, I try to explore a new way to graph 3D object: Rayshader! 
+date: 05-07-2022
+output:
+  distill::distill_article:
+    self_contained: false
+preview: rayshader_hawai.jpeg
+---
+
+This project focuses on discovering rayshader features (the 3D Mapping technique in R).
+
+What is Rayshader? rayshader is an open source package for producing 2D and 3D data visualizations in R. rayshader uses elevation data in a base R matrix and a combination of raytracing, spherical texture mapping, overlays, and ambient occlusion to generate beautiful topographic 2D and 3D maps. In addition to maps, rayshader also allows the user to translate ggplot2 objects into beautiful 3D data visualizations.
+
+In this project, we will see different feautures of rayshader, how to combine that with ggplot2 as well as a cool dataset for you to explore!
+
+Here is the link to the [website](https://rayshader.netlify.app/)
+

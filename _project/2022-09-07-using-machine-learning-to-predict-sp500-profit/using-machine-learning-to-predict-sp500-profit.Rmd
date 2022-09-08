@@ -1,0 +1,24 @@
+---
+title: "Using Machine Learning to Predict S&P500 Profit"
+description: |
+  For this project, we try to predict the profitability of the S&P500 Companies by machine learning. Using our model, the top 20 companies have the profitability of 47.25%, which is far higher than the normal S&P 500's profit of 23.07%. 
+  
+date: 03-03-2022
+output:
+  distill::distill_article:
+    self_contained: false
+preview: machineLearning.jpeg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+The financial market is a strange place that is very hard to navigate around. We have seen Warren Buffett, Ray Dalio, Charlie Munger - the very very best who have had billions of dollars. Others, 95% of the population, lose the money instead.
+
+So, how are the best of the best pick its stocks? It is from the fundamental, the technical side or the sentimental side? Within this project, we hope to bring another perspective, using machine learning models to predict the profitability of the stock price.
+
+You can check it out [here](https://sp500predictionprofit.netlify.app)
+
+Moreover, if you want to see the powerpoint presentation for the project, I also included it below [here](https://docs.google.com/presentation/d/1acwePWvIieVakPHu-R3zLfViFH8QpYD3/edit?usp=sharing&ouid=107416410399851833560&rtpof=true&sd=true)

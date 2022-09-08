@@ -1,0 +1,23 @@
+---
+title: "Using Bayesian Statistics to predict corporate earnings"
+description: |
+  Can Bayesian Statistics be used to predict S&P 500 Earnings? Let's find out!
+date: 03-07-2022
+output:
+  distill::distill_article:
+    self_contained: false
+preview: finance.jpeg
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+For this project, our main goal is to analyze and model this data to better improve projections for a company’s future earnings. We took a Bayesian approach to tackle a situation: predicting the future earnings of S&P 500 companies, using previous earnings and sales. We explore a few Bayesian hierarchical models, as well as a SARIMA model using the bayesforcast package to try and identify one that can provide insight and better predictions for future company’s earnings. 
+
+How will the project turn out? You can check it out [here](https://nolan-meyer.github.io/bayesian-finance/) 
+
+
+
+

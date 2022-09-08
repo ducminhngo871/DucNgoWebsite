@@ -1,0 +1,32 @@
+---
+title: "Soccer Spatial Analysis"
+description: |
+  This project demonstrates the use of spatial analysis on one of the most exciting sports in the world: soccer. 
+date: 09-07-2022
+output:
+  distill::distill_article:
+    self_contained: false
+preview: soccerSpatial.png
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+Soccer analytics has been an area of interest for a long time, but without the technology to track where and when events are happening few breakthroughs have happened. It has been known that statistical analysis of professional soccer has been way behind that of the “Big 4” American sports (baseball, football, basketball, and soccer). 
+
+For our research, we plan to shed some lights into soccer spatial analytics by answering the three key questions: 
+
+1) *How are passes distributed differently based on factors within a soccer match?* 
+
+2) *Where on the field do teams find more success passing than other teams, specifically in the Premier League?*
+
+3) *How is the Premier League different from other top 5 European leagues?*
+
+If you are interested in this project, check out our [website](https://nolan-meyer.github.io/correlated_capstone_proj/)
+
+
+
+

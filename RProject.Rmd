@@ -1,6 +1,6 @@
 ---
 title: "R Project"
-
+listing: posts
 site: distill::distill_website
 ---
 

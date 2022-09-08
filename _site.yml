@@ -11,9 +11,9 @@ navbar:
     - text: "Work Experience"
       href: work.html
     - text: "Tidy Tuesday"
-      href: TidyTuesday.html
-    - text: "R Project"
-      href: RProject.html
+      href: tidyTuesday.html
+    - text: "Final Project"
+      href: finalProject.html
     - icon: fa fa-github
       href: https://github.com/ducminhngo871
     - icon: fa fa-linkedin

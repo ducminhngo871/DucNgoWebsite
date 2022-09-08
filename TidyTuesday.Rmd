@@ -1,4 +1,5 @@
 ---
-title: "Tidy Tuesday and R Project"
-listing:  posts
+title: "Tidy Tuesday"
+listing: tidy
 ---
+
