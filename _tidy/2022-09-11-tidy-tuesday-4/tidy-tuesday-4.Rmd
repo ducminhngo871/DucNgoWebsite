@@ -1,0 +1,80 @@
+---
+title: "Tidy Tuesday 4"
+description: |
+  A short description of the post.
+author: []
+date: 09-11-2022
+output:
+  html_document:
+    df_print: paged
+    code_download: true
+    theme: cerulean
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, echo = TRUE, error=TRUE, message=FALSE, warning=FALSE)
+```
+
+Load the library: 
+
+```{r}
+library(dplyr)
+library(ggplot2)
+library(gghighlight)
+library(googlesheets4)
+library(lubridate)
+```
+
+Here is the dataset: 
+
+```{r}
+
+
+gs4_deauth() #To not have to authorize each time you knit.
+
+harvest_2021 <- read_sheet("https://docs.google.com/spreadsheets/d/1DU6dpxrbPGW2oJHQ6TG_xibazoGhvmRcqk2iPGOaRUI/edit?usp=sharing") %>%
+mutate(date = ymd(date))
+```
+
+```{r}
+harvest_2021
+```
+
+Looking at the dataset, for this week's tidy tuesday, I am planning to find the top 3 vegetables with the highest cumulative weight after a period of time. 
+
+First, I will try to explore the min and the max date for the plot: 
+
+```{r}
+harvest_2021 %>% 
+  summarise(min(date), max(date))
+```
+
+After that, I will plot the graph to see which vegetables have the highest weight cumulative overall: 
+
+```{r}
+harvest_2021 %>% 
+  mutate(wt_lbs = weight*0.00220462) %>% 
+  group_by(vegetable, date) %>%
+  summarize(daily_wt_lbs = sum(wt_lbs)) %>% 
+  mutate(cum_wt_lbs = cumsum(daily_wt_lbs)) %>% 
+  arrange(cum_wt_lbs) %>% 
+  ggplot(aes(x = date, y = cum_wt_lbs, color = vegetable)) +
+  geom_line() + 
+  gghighlight(max(cum_wt_lbs) > 90) + 
+  labs(title = "The vegatable's cumulative weight in pounds from May 2021 to October 2021",
+       y = "",
+       x = "") + 
+  theme_minimal() + 
+  theme(# remove the vertical grid lines
+        panel.grid.major.x = element_blank() ,
+        panel.grid.major.y = element_line( size=.05, color="black")) 
+```
+
+We can clearly see that tomatoes, pumpkin and squash have the 3 highest cumulative weight overall. 
+
+
+
+

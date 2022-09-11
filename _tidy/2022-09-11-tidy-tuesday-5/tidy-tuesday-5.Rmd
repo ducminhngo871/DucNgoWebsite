@@ -1,0 +1,91 @@
+---
+title: "Tidy Tuesday 10-26-2021"
+description: |
+  Marathon Running for each age group. 
+author: []
+date: 10-26-2021
+output:
+  html_document:
+    df_print: paged
+    code_download: true
+    theme: cerulean
+  distill::distill_article:
+    self_contained: false
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, echo = TRUE, error=TRUE, message=FALSE, warning=FALSE)
+```
+
+```{r}
+# Or read in the data manually
+
+ultra_rankings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/ultra_rankings.csv')
+race <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/race.csv')
+```
+
+Here are the datasets if you are interested: 
+
+```{r}
+ultra_rankings
+```
+
+```{r}
+race
+```
+
+```{r libraries}
+library(tidyverse)         # for reading in data, graphing, and cleaning
+library(tidymodels)        # for modeling... tidily
+library(usemodels)         # for suggesting step_XXX() functions
+library(glmnet)            # for regularized regression, including LASSO
+library(naniar)            # for examining missing values (NAs)
+library(lubridate)         # for date manipulation
+library(moderndive)        # for King County housing data
+library(vip)               # for variable importance plots
+#library(rmarkdown)         # for paged tables
+library(stacks)
+library(doParallel)        # for parallel processing
+theme_set(theme_minimal()) # my favorite ggplot2 theme :)
+library(ggthemes)
+library(hms)
+```
+
+For my interest, this week, I will try to find the average running time for each age group across all countries. The way I am doing that is first by filtering the age group: only from 10 and above. After that, I will try to group by each age group and gender, followed by finding the mean running time for each of the group.
+
+Following with the data wrangling, I graph the information using the line graph to fully see the differences.
+
+
+```{r}
+ultra_rankings %>% 
+  filter(age > 10, age < 100) %>%
+  select(rank, age, time_in_seconds, gender) %>% 
+  drop_na() %>% 
+  mutate(time_Hour = time_in_seconds / 3600) %>% 
+  mutate(age_groups = cut(age, seq(10, 140, 10))) %>% 
+  group_by(age_groups, gender) %>% 
+  summarize(mean_time = mean(time_Hour)) %>% 
+  ggplot(aes(x= age_groups, y = mean_time, fill = gender)) + 
+  geom_col(position = "dodge") +
+  geom_text(aes(x = age_groups, y =mean_time, label = sprintf("%0.2f", round(mean_time, digits = 2))),
+            position = position_dodge(width = 0.8), 
+            vjust = -1, size = 2,
+            fontface="bold", 
+            family="Times") +
+  labs(title = "Average running time in Hour for each age group accross all countries", 
+       y= NULL, 
+       x = NULL) + 
+  theme(axis.title.x = element_blank(), 
+        axis.title.y = element_blank(),
+        plot.title = element_text(family = "Times"), 
+        axis.text = element_blank()) + 
+  theme_minimal()
+```
+
+
+
+
+
+
+

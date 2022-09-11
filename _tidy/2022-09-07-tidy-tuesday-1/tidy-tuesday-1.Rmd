@@ -4,6 +4,10 @@ description: |
   My attempt for tidy tuesday 09-21-21. The dataset is about the Emmy Awards. 
 date: 09-21-2021
 output:
+  html_document:
+    df_print: paged
+    code_download: true
+    theme: cerulean
   distill::distill_article:
     self_contained: false
 ---
@@ -14,7 +18,7 @@ library(tidyverse)         # for graphing and data cleaning
 ```
 
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message = FALSE, warning = FALSE)
+knitr::opts_chunk$set(echo = FALSE, echo = TRUE, error=TRUE, message=FALSE, warning=FALSE)
 ```
 
 ```{r}

@@ -1,0 +1,64 @@
+---
+title: "Recreation Graph Challenge Tidy Tuesday"
+description: |
+  Recreation Dubois Challege
+date: 10-19-2021
+output:
+  html_document:
+    df_print: paged
+    code_download: true
+    theme: cerulean
+  distill::distill_article:
+    self_contained: false
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, echo = TRUE, error=TRUE, message=FALSE, warning=FALSE)
+```
+
+For this week, the data I faced is completely different. It is part of the `#DuBoisChallenge` where you will attempt to recreate visualizations made by W.E.B. DuBois for the 1900 Paris Exposition. This week, the goal for is to pay close attention, do background reading and try to recreate it as close as possible.
+
+If you want to read about the summary for the TidyTuesday for this week, check out [this page](https://github.com/rfordatascience/tidytuesday/blob/master/data/2021/2021-02-16/readme.md). 
+
+For the interested graphs to recreate, you can find in this [resource](https://publicdomainreview.org/collection/w-e-b-du-bois-hand-drawn-infographics-of-african-american-life-1900), which displays many of the graphs.
+
+For this challenge, I am going to recreate the Georgia graph: 
+
+```{r}
+library(tidyverse)     # for graphing and data cleaning
+library(lubridate)     # for date manipulation
+library(ggthemes)      # for even more plotting themes
+library(janitor)       # for cleaning variable names
+theme_set(theme_minimal()) # My favorite ggplot() theme :)
+```
+
+```{r, fig.height= 10, fig.width= 6}
+georgia_pop <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-02-16/georgia_pop.csv')
+georgia_pop %>% 
+  pivot_longer(cols = Colored: White, 
+               names_to = "Colored_white",
+               values_to = "Percent") %>% 
+  ggplot(aes(y = Year, x = Percent)) + 
+  geom_path(aes(linetype=Colored_white)) + 
+  scale_x_reverse(breaks = seq(0,100,5)) + 
+  scale_y_continuous(breaks = seq(1790, 1890,10)) + 
+  scale_linetype_discrete(name = "", labels = c("Colored                                                                                                           ", "White")) + 
+  labs(title = "Comparative Increase Of White And Colored \n Population Of Georgia",
+       color = "",
+       y = "", 
+       x = "Percents")+ 
+  theme_minimal() + 
+  theme(plot.title = element_text(color = "black", size = 15, face = "bold", hjust = 0.5),
+        legend.position = "bottom", 
+        plot.background = element_rect(fill = "blanchedalmond"),
+        panel.grid.major = element_line(size = 0.2, linetype = 'solid',
+                                colour = "coral3"),
+        panel.grid.minor = element_line(size = 0, linetype = 'solid',
+                                colour = "coral3"),
+        legend.title = element_blank()) 
+```
+
+
+
+
+

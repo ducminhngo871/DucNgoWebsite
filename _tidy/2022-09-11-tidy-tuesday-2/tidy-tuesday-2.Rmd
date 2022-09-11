@@ -1,19 +1,21 @@
 ---
 title: "Tidy Tuesday 05-10-2021"
 description: |
-  During this week, I am trying to find information about nurses in the US: their salary, how many nurses are there for each state in 2020. 
-  
-author:
-  - name: DucNgo
-    url: {}
-date: 10-05-2021
+  For this week, I am trying to find information about nurses in the US: their salary, how many nurses are there for each state in 2020. 
+date: Tidy Tuesday 05-10-2021
 output:
+  html_document:
+    df_print: paged
+    code_download: true
+    theme: cerulean
   distill::distill_article:
     self_contained: false
+preview: map.png
 ---
 
+
 ```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE)
+knitr::opts_chunk$set(echo = FALSE, echo = TRUE, error=TRUE, message=FALSE, warning=FALSE)
 ```
 
 ```{r}
@@ -50,6 +52,12 @@ nurses_join <- nurses %>%
 
 nurses_join
 ```
+
+For this week's data, I can see that we are having nurse's data in 50 states in the US in 2020. I can see their wages by weekly, monthly and yearly. Additionally, I can see the states' ranking for the nurse profession as well!
+
+So, my tidy tuesday will be: Try to focus on 2020 only, try to find the salary as well as the number of registered nurse for each state. 
+
+The first thing I did is to filter by the year of 2020. After that, I tried to created a map featuring the number of nurses as well as the median salary for the US. 
 
 ```{r}
 nurses_2020 <- nurses_join %>% 
@@ -91,6 +99,18 @@ nurses_map <- nurses_2020 %>%
 
 ggplotly(nurses_map)
 ```
+
+```{r}
+library(ggpubr)
+
+ggarrange(nurses_median_salary, nurses_map,
+          ncol = 2, nrow = 1)
+```
+
+Looking at the graph, you can clearly see the differences between the salary for each region. Moreover, we can see that California, Oregon, or Washington have the highest median annual salary. On the other hand, Minnesota, North or South Dakota have the highest number of registered nurses per 1000 people, probably because of low population compared to other regions in the US. 
+
+
+
 
 
 
