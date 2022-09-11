@@ -9,7 +9,7 @@
     "contents": "\nFor this week, the data I faced is completely different. It is part\nof the #DuBoisChallenge where you will attempt to recreate\nvisualizations made by W.E.B. DuBois for the 1900 Paris Exposition. This\nweek, the goal for is to pay close attention, do background reading and\ntry to recreate it as close as possible.\nIf you want to read about the summary for the TidyTuesday for this\nweek, check out this\npage.\nFor the interested graphs to recreate, you can find in this resource,\nwhich displays many of the graphs.\nFor this challenge, I am going to recreate the Georgia graph:\n\n\n\n\n\n\n\n\n\n",
     "preview": "tidy/2022-09-11-tidy-tuesday-3/tidy-tuesday-3_files/figure-html5/unnamed-chunk-2-1.png",
     "last_modified": "2022-09-11T17:45:10-05:00",
-    "input_file": "tidy-tuesday-3.knit.md"
+    "input_file": {}
   },
   {
     "path": "tidy/2022-09-07-tidy-tuesday-1/",
@@ -33,6 +33,6 @@
     "contents": "\n\n\nlibrary(tidytuesdayR)\nlibrary(tidyverse)         # for graphing and data cleaning\n\n\n\n\n\n# Get the Data\n\n# Read in with tidytuesdayR package \n# Install from CRAN via: install.packages(\"tidytuesdayR\")\n# This loads the readme and all the datasets for the week of interest\n\n# Either ISO-8601 date or year/week works!\n\ntuesdata <- tidytuesdayR::tt_load('2021-09-21')\n\n\n\n    Downloading file 1 of 1: `nominees.csv`\n\ntuesdata <- tidytuesdayR::tt_load(2021, week = 39)\n\n\n\n    Downloading file 1 of 1: `nominees.csv`\n\nnominees <- tuesdata$nominees\n\n# Or read in the data manually\n\nnominees <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-09-21/nominees.csv')\n\n\n\n\n\n### Create a graph based on every category\nnominees_types <- nominees %>%\n  filter(year > 2010) %>%\n  group_by(year, type) %>%\n  summarize(count=n()) \n\n\nnominees_types %>%\n  ggplot(aes(x = as.factor(year), y = count, fill = type)) + geom_col(position = \"dodge\") + \n  geom_text(aes(x = as.factor(year), y = count, label = count),\n            position = position_dodge(width = 0.8), \n            vjust = -1, size = 2,\n            fontface=\"bold\", \n            family=\"Times\") + \n  labs(title = \"Emmy Awards Nominee and Winner from 2011 to 2021\") + \n  theme_minimal() + \n  theme(axis.title.x = element_blank(), \n        axis.title.y = element_blank(),\n        plot.title = element_text(family = \"Times\"))\n\n\n\n\nIn here, we can clearly see that from 2011 to 2013, the number of\nnominee increased rapidly. However, the number of nominee in 2014\nsignificantly dropped.\nAfter a strange 2014, the number of nominee increased significantly\nevery year from 1630 nominees in 2015 to 2152 nominees in 2019.\nMeanwhile, the number of winner remains relatively stable.\n\n\n\n",
     "preview": "tidy/2022-09-11-tidy-tuesday-2/tidy-tuesday-2_files/figure-html5/unnamed-chunk-3-1.png",
     "last_modified": "2022-09-11T16:09:04-05:00",
-    "input_file": "tidy-tuesday-2.knit.md"
+    "input_file": {}
   }
 ]

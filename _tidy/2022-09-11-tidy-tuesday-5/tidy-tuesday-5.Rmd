@@ -73,6 +73,7 @@ ultra_rankings %>%
             vjust = -1, size = 2,
             fontface="bold", 
             family="Times") +
+  scale_fill_brewer(palette="Dark2")
   labs(title = "Average running time in Hour for each age group accross all countries", 
        y= NULL, 
        x = NULL) + 
