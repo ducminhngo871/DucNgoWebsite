@@ -5,12 +5,12 @@ description: |
 author: []
 date: 10-26-2021
 output:
+  # distill::distill_article:
+  #   self_contained: false
   html_document:
     df_print: paged
     code_download: true
     theme: cerulean
-  distill::distill_article:
-    self_contained: false
 ---
 
 
@@ -73,7 +73,7 @@ ultra_rankings %>%
             vjust = -1, size = 2,
             fontface="bold", 
             family="Times") +
-  scale_fill_brewer(palette="Dark2")
+  scale_fill_brewer(palette="Dark2") + 
   labs(title = "Average running time in Hour for each age group accross all countries", 
        y= NULL, 
        x = NULL) + 
