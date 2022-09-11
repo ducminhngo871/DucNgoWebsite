@@ -1,16 +1,15 @@
 ---
-title: "Tidy Tuesday 4"
+title: "Tidy Tuesday 10-26-2021"
 description: |
-  Which vegetables got cumulatived the most?
-author: []
-date: 09-11-2022
+  Marathon Running for each age group. 
+date: 10-26-2021
 output:
-  html_document:
-    df_print: paged
-    code_download: true
-    theme: cerulean
   distill::distill_article:
     self_contained: false
+  # html_document:
+  #   df_print: paged
+  #   code_download: true
+  #   theme: cerulean
 ---
 
 
@@ -18,62 +17,74 @@ output:
 knitr::opts_chunk$set(echo = FALSE, echo = TRUE, error=TRUE, message=FALSE, warning=FALSE)
 ```
 
-Load the library: 
-
 ```{r}
-library(dplyr)
-library(ggplot2)
-library(gghighlight)
-library(googlesheets4)
-library(lubridate)
+# Or read in the data manually
+
+ultra_rankings <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/ultra_rankings.csv')
+race <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2021/2021-10-26/race.csv')
 ```
 
-Here is the dataset: 
+Here are the datasets if you are interested: 
 
 ```{r}
-
-
-gs4_deauth() #To not have to authorize each time you knit.
-
-harvest_2021 <- read_sheet("https://docs.google.com/spreadsheets/d/1DU6dpxrbPGW2oJHQ6TG_xibazoGhvmRcqk2iPGOaRUI/edit?usp=sharing") %>%
-mutate(date = ymd(date))
+ultra_rankings
 ```
 
 ```{r}
-harvest_2021
+race
 ```
 
-Looking at the dataset, for this week's tidy tuesday, I am planning to find the top 3 vegetables with the highest cumulative weight after a period of time. 
+```{r libraries}
+library(tidyverse)         # for reading in data, graphing, and cleaning
+library(tidymodels)        # for modeling... tidily
+library(usemodels)         # for suggesting step_XXX() functions
+library(glmnet)            # for regularized regression, including LASSO
+library(naniar)            # for examining missing values (NAs)
+library(lubridate)         # for date manipulation
+library(moderndive)        # for King County housing data
+library(vip)               # for variable importance plots
+#library(rmarkdown)         # for paged tables
+library(stacks)
+library(doParallel)        # for parallel processing
+theme_set(theme_minimal()) # my favorite ggplot2 theme :)
+library(ggthemes)
+library(hms)
+```
 
-First, I will try to explore the min and the max date for the plot: 
+For my interest, this week, I will try to find the average running time for each age group across all countries. The way I am doing that is first by filtering the age group: only from 10 and above. After that, I will try to group by each age group and gender, followed by finding the mean running time for each of the group.
+
+Following with the data wrangling, I graph the information using the line graph to fully see the differences.
+
 
 ```{r}
-harvest_2021 %>% 
-  summarise(min(date), max(date))
+ultra_rankings %>% 
+  filter(age > 10, age < 100) %>%
+  select(rank, age, time_in_seconds, gender) %>% 
+  drop_na() %>% 
+  mutate(time_Hour = time_in_seconds / 3600) %>% 
+  mutate(age_groups = cut(age, seq(10, 140, 10))) %>% 
+  group_by(age_groups, gender) %>% 
+  summarize(mean_time = mean(time_Hour)) %>% 
+  ggplot(aes(x= age_groups, y = mean_time, fill = gender)) + 
+  geom_col(position = "dodge") +
+  geom_text(aes(x = age_groups, y =mean_time, label = sprintf("%0.2f", round(mean_time, digits = 2))),
+            position = position_dodge(width = 0.8), 
+            vjust = -1, size = 2,
+            fontface="bold", 
+            family="Times") +
+  scale_fill_brewer(palette="Dark2") + 
+  labs(title = "Average running time in Hour for each age group accross all countries", 
+       y= NULL, 
+       x = NULL) + 
+  theme(axis.title.x = element_blank(), 
+        axis.title.y = element_blank(),
+        plot.title = element_text(family = "Times"), 
+        axis.text = element_blank()) + 
+  theme_minimal()
 ```
 
-After that, I will plot the graph to see which vegetables have the highest weight cumulative overall: 
 
-```{r}
-harvest_2021 %>% 
-  mutate(wt_lbs = weight*0.00220462) %>% 
-  group_by(vegetable, date) %>%
-  summarize(daily_wt_lbs = sum(wt_lbs)) %>% 
-  mutate(cum_wt_lbs = cumsum(daily_wt_lbs)) %>% 
-  arrange(cum_wt_lbs) %>% 
-  ggplot(aes(x = date, y = cum_wt_lbs, color = vegetable)) +
-  geom_line() + 
-  gghighlight(max(cum_wt_lbs) > 90) + 
-  labs(title = "The vegatable's cumulative weight in pounds from May 2021 to October 2021",
-       y = "",
-       x = "") + 
-  theme_minimal() + 
-  theme(# remove the vertical grid lines
-        panel.grid.major.x = element_blank() ,
-        panel.grid.major.y = element_line( size=.05, color="black")) 
-```
 
-We can clearly see that tomatoes, pumpkin and squash have the 3 highest cumulative weight overall. 
 
 
 

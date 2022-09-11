@@ -9,7 +9,7 @@ navbar:
     image: ava_copy.png
   right:
     - text: "Work Experience"
-      href: work.html
+      href: https://drive.google.com/file/d/1ZtAqs7DOaoqrcd__KZZ-9X31WH9Jirzn/view?usp=sharing target = "_blank"
     - text: "Tidy Tuesday"
       href: tidyTuesday.html
     - text: "Final Project"
@@ -18,8 +18,6 @@ navbar:
       href: https://github.com/ducminhngo871
     - icon: fa fa-linkedin
       href: https://www.linkedin.com/in/duc-minh-ngo/
-    - icon: fa fa-facebook
-      href: https://www.facebook.com/goldenwarior1/
     - icon: fa fa-medium
       href: https://medium.com/@ducminhngo871
 output: distill::distill_article

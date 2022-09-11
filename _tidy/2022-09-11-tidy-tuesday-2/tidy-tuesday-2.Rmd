@@ -4,10 +4,10 @@ description: |
   For this week, I am trying to find information about nurses in the US: their salary, how many nurses are there for each state in 2020. 
 date: Tidy Tuesday 05-10-2021
 output:
-  html_document:
-    df_print: paged
-    code_download: true
-    theme: cerulean
+  # html_document:
+  #   df_print: paged
+  #   code_download: true
+  #   theme: cerulean
   distill::distill_article:
     self_contained: false
 preview: map.png
