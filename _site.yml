@@ -12,7 +12,7 @@ navbar:
       href: https://drive.google.com/file/d/1ZtAqs7DOaoqrcd__KZZ-9X31WH9Jirzn/view?usp=sharing target = "_blank"
     - text: "Tidy Tuesday"
       href: tidyTuesday.html
-    - text: "Final Project"
+    - text: "Projects"
       href: finalProject.html
     - icon: fa fa-github
       href: https://github.com/ducminhngo871
