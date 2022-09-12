@@ -13,6 +13,7 @@ links:
     
 output:
   postcards::trestles
+  
 site: distill::distill_website
 ---
  
@@ -20,7 +21,7 @@ site: distill::distill_website
 
 Young professional with corporate and start-up experience in data analytics and finance. I have a strong interest in Data Science, Finance Technology, and Applied Machine Learning & Deep Learning. I hope to start a career in data science, facing the challenges of constant innovation at the heart of technology and data-driven companies.
 
-Apart from my job, I also post my personal project as well as visualizations that I have been created in the Personal Project and Tidy Tuesday section. Check it out!
+Apart from my job, I also post my personal project as well as visualizations that I have created in the  Projects and Tidy Tuesday section. Check it out!
 
 ## Education
 
@@ -34,8 +35,10 @@ Magna Cum Laude | 3.89 / 4.00 GPA.
 
 **In4mation Insights** | Marketing Analyst | July 2022 - Present
 
-**BENIT** | Data Analyst Intern | March 2021- August 2021
+**VietSeeds Foundation** | Quantitative Analyst Intern | March 2021- August 2021
 
-**VietSeeds Foundation** | Quantitative Analyst Intern| January 2021 – April 2021
+**BENIT** | Data Analyst Intern | January 2021 – April 2021
+
+
 
 
