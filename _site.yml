@@ -9,7 +9,7 @@ navbar:
     image: ava_copy.png
   right:
     - text: "Work Experience"
-      href: https://drive.google.com/file/d/1AcCcdtEo7LYs5rf8FhIpFgOg1Au5ylWo/view?usp=sharing = "_blank"
+      href: https://drive.google.com/file/d/1AcCcdtEo7LYs5rf8FhIpFgOg1Au5ylWo/view?usp=sharing "_blank"
     - text: "Tidy Tuesday"
       href: tidyTuesday.html
     - text: "Projects"
