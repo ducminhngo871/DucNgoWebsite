@@ -14,11 +14,15 @@ navbar:
       href: tidyTuesday.html
     - text: "Projects"
       href: finalProject.html
+    - text: "Book Review"
+      href: book_review.html
     - icon: fa fa-github
       href: https://github.com/ducminhngo871
     - icon: fa fa-linkedin
       href: https://www.linkedin.com/in/duc-minh-ngo/
     - icon: fa fa-medium
       href: https://medium.com/@ducminhngo871
+    - icon: fa fa-youtube
+      href: https://www.youtube.com/channel/UCF2WhCEZUjVVCg7QnB93wCA
 output: distill::distill_article
 theme: "Duc_Ngo_theme.css"
