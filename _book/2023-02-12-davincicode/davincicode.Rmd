@@ -11,6 +11,8 @@ preview: davinci.jpeg
 
 ![Da Vinci's code](davinci.jpeg)
 
+# English Review: 
+
 "The Da Vinci Code" is a bestselling novel by Dan Brown that was first published in 2003. The story begins with the murder of Jacques Saunière, the curator of the Louvre Museum in Paris. Robert Langdon, a Harvard symbologist, is called in to help decipher the cryptic message left by Saunière before his death, which leads him to team up with Sophie Neveu, a cryptologist and Saunière's granddaughter.
 
 The two main characters find themselves on a quest to uncover the truth about the Holy Grail, which they discover is not a physical chalice but a metaphor for the bloodline of Jesus Christ and Mary Magdalene. The book delves into the idea that Jesus and Mary were married and had a child, whose descendants are protected by a secret society known as the Priory of Sion.
@@ -19,10 +21,7 @@ Their investigation brings them in conflict with the Catholic organization Opus 
 
 Throughout the book, the characters encounter a series of historical and religious mysteries related to Leonardo da Vinci, the Knights Templar, and other figures from history. The novel also explores controversial ideas related to the origins of Christianity, including the possibility that Mary Magdalene was married to Jesus and that their descendants may have survived to the present day.
 
-Nhìn chung, "Mật mã Da Vinci" là một câu chuyện kinh dị có nhịp độ nhanh và hồi hộp, pha trộn giữa thực tế và hư cấu để tạo nên một câu chuyện phức tạp và hấp dẫn. Cuốn sách đã được thảo luận và tranh luận rộng rãi nhờ khám phá các chủ đề tôn giáo và lịch sử, cũng như miêu tả của nó về Giáo hội Công giáo và các tổ chức khác.
-
----- 
-Vietnamese sub:
+# Vietnamese sub:
 
 "Mật mã Da Vinci" là cuốn tiểu thuyết bán chạy nhất của Dan Brown được xuất bản lần đầu vào năm 2003. Câu chuyện bắt đầu bằng vụ sát hại Jacques Saunière, người phụ trách Bảo tàng Louvre ở Paris. Robert Langdon, một nhà biểu tượng học của Harvard, được gọi đến để giúp giải mã thông điệp khó hiểu mà Saunière để lại trước khi chết, điều này khiến ông hợp tác với Sophie Neveu, một nhà mật mã học và là cháu gái của Saunière.
 
