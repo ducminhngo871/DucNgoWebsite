@@ -19,9 +19,13 @@ site: distill::distill_website
  
 ## About me
 
-Young professional with corporate and start-up experience in data analytics and finance. I have a strong interest in Data Science, Finance Technology, and Applied Machine Learning & Deep Learning. I hope to start a career in data science, facing the challenges of constant innovation at the heart of technology and data-driven companies.
+I am a highly motivated and results-driven Marketing Data Analyst with one year of professional experience. Passionate about leveraging data to drive strategic marketing decisions, I have honed my skills in various tools and technologies, including Python, R Studio, Databricks, SQL, and Microsoft Azure.
 
-Apart from my job, I also post my personal project as well as visualizations that I have created in the  Projects and Tidy Tuesday section. Check it out!
+As a Marketing Data Analyst, I excel at analyzing large datasets, extracting valuable insights, and translating them into actionable recommendations. My proficiency in Python allows me to develop efficient data pipelines, automate data cleaning and transformation processes, and conduct advanced statistical analyses. With R Studio, I have leveraged my analytical skills to build predictive models and perform data visualization tasks to effectively communicate complex findings.
+
+If you are looking for a Data Analyst who combines technical expertise with a strong business acumen, please don't hesitate to reach out. I am eager to contribute my skills and experience to help your organization achieve its strategic marketing goals.
+
+Additionally, I also post my personal project as well as visualizations that I have created in the  Projects and Tidy Tuesday section. Check it out!
 
 ## Education
 
@@ -29,13 +33,13 @@ Apart from my job, I also post my personal project as well as visualizations tha
 
 Data Science Major, Computer Science Minor | September 2018 - May 2022
 
-Magna Cum Laude | 3.89 / 4.00 GPA.  
+Magna Cum Laude | 3.90 / 4.00 GPA.  
 
 ## Work Experience
 
 **In4mation Insights** | Marketing Analyst | July 2022 - Present
 
-**VietSeeds Foundation** | Quantitative Analyst Intern | March 2021- August 2021
+**VietSeeds Foundation** | Quantitative Analyst Intern | March 2021 - August 2021
 
 **BENIT** | Data Analyst Intern | January 2021 – April 2021
 
