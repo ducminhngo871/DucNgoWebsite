@@ -6,7 +6,7 @@ date: 02/12/2023
 output:
   distill::distill_article:
     self_contained: false
-preview: davinci.jpeg
+preview: 1.jpeg
 ---
 
 ![Da Vinci's code](davinci.jpeg)
