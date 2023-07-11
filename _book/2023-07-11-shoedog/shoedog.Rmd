@@ -1,14 +1,16 @@
 ---
 title: "A Journey of Determination and Leaving a Mark on the World"
 description: |
-  My thought, impression about Shoe Dog
-author: []
-date: 2023-07-11
+  My second book review
+date: 07/11/2023
 output:
   distill::distill_article:
     self_contained: false
 preview: shoeDog.jpeg
 ---
+
+![Shoe Dog](shoeDog.jpeg)
+
 
 "Shoe Dog" by Phil Knight, the co-founder of Nike, takes readers on an inspiring journey through the highs and lows of entrepreneurship. From the very first page, Knight's memoir grabs your attention and immerses you in the world of a passionate individual driven by a burning desire to leave a mark on the world.
 

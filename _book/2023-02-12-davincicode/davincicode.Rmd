@@ -1,15 +1,17 @@
 ---
-title: "Da Vinci's code Review"
+title: "Da Vinci's Book Review"
 description: |
   Here is my first book review!
-date: 02/12/2023
+date: 05/12/2023
 output:
   distill::distill_article:
     self_contained: false
-preview: 1.jpeg
+preview: davinci.jpg
+object-fit: cover;
+object-position: top;
 ---
 
-![Da Vinci's code](davinci.jpeg)
+![Da Vinci's code](davinci.jpg)
 
 # English Review: 
 
